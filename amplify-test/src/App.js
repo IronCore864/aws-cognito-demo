@@ -1,6 +1,7 @@
 import { Amplify } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+import { Auth } from '@aws-amplify/auth';
 
 const awsconfig = {
   region: process.env.REACT_APP_AUTH_REGION,
@@ -20,6 +21,8 @@ const awsconfig = {
 Amplify.configure(awsconfig);
 
 function App({ signOut, user }) {
+  Auth.currentSession().then(data => console.log(data.idToken));
+
   return (
     <>
       <h1>Hello {user.username}</h1>

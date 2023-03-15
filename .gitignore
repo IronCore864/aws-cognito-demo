@@ -1,3 +1,5 @@
 # Terraform Stuff
 **/.terraform
 **/terraform.tfstate
+**/terraform.tfstate.backup
+**/lambda_function_payload.zip

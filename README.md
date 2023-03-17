@@ -93,7 +93,8 @@ _Note that this is only a demo to show how backend API authorization works. In r
 
 ## 4 TODO
 
-- Use a Deployment in EKS with Ingress in EKS instead of a Lambda function as the backend of the API Gateway.
+- Terraform module for API Gateway to support multiple APIs
+- Use a Deployment in EKS with Ingress instead of a Lambda function as the backend of the API Gateway.
 
 ---
 

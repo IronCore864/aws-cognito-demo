@@ -53,9 +53,16 @@ In short, the created API has only one path with one action (GET), and it uses t
 
 _This step is already done._
 
+Create user with a verified email address (user doesn't have to verify again):
+
 ```bash
-aws cognito-idp admin-create-user  --user-pool-id "us-east-2_C0GL3MgBU"  --username "testuser"
+aws cognito-idp admin-create-user \
+              --user-pool-id us-east-2_C0GL3MgBU \
+              --username testuser \
+              --user-attributes Name=email,Value=tiexin.guo@merico.dev Name=email_verified,Value="true"
 ```
+
+Only with verified email can a user reset his password.
 
 Set password:
 
